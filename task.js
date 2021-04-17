@@ -4,8 +4,10 @@ class Transport {
         this.price = price;
         this.vendor = vendor;
         this.model = model;
+        //привязать методы класса к экземпляру класса с контекстом this
         this.getInfo = this.getInfo.bind(this)
         this.getPrice = this.getPrice.bind(this)
+
     }
 
     getInfo() {
