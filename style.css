@@ -1,71 +1,78 @@
-.page {
-    font-family: Montserat;
+@font-face {
+    src: url(https://code.s3.yandex.net/web-code/fonts/SuisseIntl-Book.woff);
+    font-family: 'Suisse';
+    font-weight: normal;
+}
+
+@font-face {
+    src: url(https://code.s3.yandex.net/web-code/fonts/SuisseIntl-Bold.woff
+    );
+    font-family: 'Suisse';
+    font-weight: bold;
+}
+
+html {
+    height: 100%;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: #323131;
+    color: white;
+    position: relative;
+    max-width: 540px;
+    min-height: 100%;
+    margin: 0 auto;
+    font-family: 'Suisse';
     box-sizing: border-box;
-    padding: 0 24px;
+    padding: 36px;
 }
 
 .header {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    min-height: 52px;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
-.header__logo {
+.logo {
+    font-weight: bold;
+    font-size: 24px;
     margin: 0;
-    text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: 0.5em;
 }
 
-.page__catalog {
-    margin-top: 32px;
-}
-
-.catalog {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 324px);
-    column-gap: 24px;
-    row-gap: 48px;
-    justify-content: center;
-}
-
-.catalog__item {
-    width: 324px;
-}
-
-.card__image {
-    width: 100%;
-    height: 216px;
-    object-fit: cover;
-    object-position: center;
-}
-
-.card__description {
-    padding: 12px;
+.button {
+    width: 130px;
+    height: 40px;
+    padding-top: 10px;
     box-sizing: border-box;
+    border: 1px solid white;
     text-align: center;
-}
-
-.card__title {
-    margin: 0;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 20px
-}
-
-.card__info {
     font-size: 14px;
-    color: #0C0C0D;
-    margin: 8px 0 0;
-    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity 0.2s;
 }
 
-.card__price {
-    margin: 8px 0 0;
-    font-size: 18px;
-    line-height: 32px;
-    color: #A98B5F;
+.button:hover {
+    opacity: 0.5;
+}
+
+.image {
+    width: 80%;
+    display: block;
+    margin: 60px auto 50px;
+}
+
+.advice {
+    font-size: 42px;
     font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 70px;
+}
+
+.footer {
+    font-size: 16px;
+    margin: 0;
+    position: absolute;
+    bottom: 36px;
 }
